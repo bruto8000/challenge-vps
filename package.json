@@ -1,0 +1,20 @@
+{
+  "name": "yandex-vrp-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : "pkg --debug yandex.vrp.proxy.js -o TAXIAPP.exe"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors-anywhere": "^0.4.4",
+    "dotenv": "^10.0.0",
+    "open": "^8.2.0"
+  },
+  "pkg": {
+    "assets": "node_modules/**/*"
+  }
+}
