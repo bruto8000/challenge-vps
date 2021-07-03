@@ -17,7 +17,8 @@ const bodyParser = require("body-parser");
 // });
 
 require("dotenv").config();
-let port = 80;
+let port = 8080;
+
 let cors_proxy = require("cors-anywhere");
 cors_proxy
   .createServer({
@@ -34,27 +35,8 @@ cors_proxy
     originWhitelist: [], // Allow all origins
     requireHeader: ["origin", "x-requested-with"],
     removeHeaders: ["cookie", "cookie2"],
-    handleInitialRequest: (req, res, url) => {
-      fs.appendFile(
-        "./logs.txt",
-        `\n\n\n\n\n${new Date()}
-        \n\n
-        ${JSON.stringify(
-          {
-            href: url && url.href,
-            headers: req.headers,
-          },
-          null,
-          2
-        )}
-        `,
-        (err) => err
-      );
-
-      return false;
-    },
   })
-  .listen(port, host, function (a, b) {
+  .listen(port, function (a, b) {
     console.log(`
     Все работает.
   `);
