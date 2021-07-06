@@ -17,7 +17,7 @@ const express = require("express");
 // });
 
 require("dotenv").config();
-let port = 8080;
+let port = 443;
 
 let cors_proxy = require("cors-anywhere");
 cors_proxy
