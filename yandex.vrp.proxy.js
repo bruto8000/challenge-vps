@@ -17,11 +17,11 @@ cors_proxy
   .createServer({
     httpsOptions: {
       key: fs.readFileSync(
-        "/etc/letsencrypt/live/kupitbitovku.ru/privkey.pem",
+        "/etc/letsencrypt/live/beeserver.ru/privkey.pem",
         "utf8",
       ),
       cert: fs.readFileSync(
-        "/etc/letsencrypt/live/kupitbitovku.ru/cert.pem",
+        "/etc/letsencrypt/live/beeserver.ru/fullchain.pem",
         "utf8",
       ),
     },
